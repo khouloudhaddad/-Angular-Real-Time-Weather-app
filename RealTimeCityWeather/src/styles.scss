@@ -1,5 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-&:root {
+:root {
   --blue-1: #3C429E;
   --blue-2: #4C52AD;
   --yellow-1: #FAC742;
@@ -21,6 +20,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: var(--blue-1);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,14 +41,6 @@ body {
   height: 50%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .lower-data {
@@ -61,6 +53,14 @@ body {
   padding: 1em;
   display: flex;
   flex-direction: column;
+}
+
+.upper-data img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .weather-data {
@@ -98,6 +98,7 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   margin-top: 1em;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -115,15 +116,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-  img {
-    width: 1.5em;
-  }
+.info-block-label img {
+  width: 1.5em;
+}
 
-  span {
-    color: var(--white);
-    font-size: 0.8em;
-  }
+.info-block-label span {
+  color: var(--white);
+  font-size: 0.8em;
 }
 
 .info-block-value {
@@ -134,18 +135,22 @@ body {
   color: var(--white);
 }
 
+
 .search {
   margin-bottom: 1em;
   text-align: center;
-
-  input {
-    background-color: var(--shadow-light);
-    outline: none;
-    border: none;
-    border-radius: 20px;
-    padding: 1em;
-    color: var(--grey-1);
-    font-size: 0.8em;
-    text-align: center;
-  }
+}
+::placeholder {
+  color: var(--white);
+  font-size: 1em;
+}
+.search input {
+  background-color: var(--shadow-light);
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 1em;
+  color: var(--grey-1);
+  font-size: 0.8em;
+  text-align: center;
 }
